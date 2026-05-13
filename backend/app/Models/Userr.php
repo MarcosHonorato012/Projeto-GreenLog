@@ -6,18 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Userr extends Model
 {
+
     protected $table = 'userrs';
 
     protected $fillable = [
+
         'nome',
         'email',
         'senha',
         'cpf',
         'telefone'
+
     ];
 
-    public function viagens()
-    {
-        return $this->hasMany(Viagem::class);
-    }
 }

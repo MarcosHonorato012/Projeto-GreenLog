@@ -9,6 +9,7 @@ class Veiculo extends Model
     protected $table = 'veiculos';
 
     protected $fillable = [
+
         'novo_veiculo',
         'modelo',
         'marca',
@@ -16,6 +17,7 @@ class Veiculo extends Model
         'ano',
         'estado',
         'observacao'
+
     ];
 
     public function viagens()

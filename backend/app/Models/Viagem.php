@@ -9,6 +9,7 @@ class Viagem extends Model
     protected $table = 'viagems';
 
     protected $fillable = [
+
         'userr_id',
         'veiculo_id',
         'nova_viagem',
@@ -19,6 +20,7 @@ class Viagem extends Model
         'destino',
         'observacao',
         'conclusao'
+
     ];
 
     public function userr()

@@ -16,29 +16,35 @@ Route::get('/', function () {
 
 // LOGIN
 
-Route::get('/login', [AuthController::class, 'showLogin'])
+Route::get('/login',
+    [AuthController::class, 'showLogin'])
     ->name('login');
 
-Route::post('/login', [AuthController::class, 'login'])
+Route::post('/login',
+    [AuthController::class, 'login'])
     ->name('login.auth');
+
+Route::get('/logout',
+    [AuthController::class, 'logout']);
 
 
 // REGISTER
 
-Route::get('/register', function () {
+Route::get('/register',
+    [AuthController::class, 'showRegister']);
 
-    return view('auth.register');
-
-});
-
-Route::post('/register', [AuthController::class, 'register'])
+Route::post('/register',
+    [AuthController::class, 'register'])
     ->name('register.store');
 
 
 // CRUDS
 
-Route::resource('userrs', UserrController::class);
+Route::resource('userrs',
+    UserrController::class);
 
-Route::resource('veiculos', VeiculoController::class);
+Route::resource('veiculos',
+    VeiculoController::class);
 
-Route::resource('viagems', ViagemController::class);
+Route::resource('viagems',
+    ViagemController::class);

@@ -8,20 +8,26 @@
 }
 
 body{
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     min-height: 100vh;
 
-    background-image: url('/images/fundo_verde.jpg');
+    background-image: url('/img/fundo_logins.jpg');
 
     background-size: cover;
+
     background-position: center;
 }
 
 .container{
 
     width: 500px;
+
     height: 500px;
 
     padding: 30px;
@@ -44,8 +50,6 @@ body{
     font-size: 35px;
 
     margin-bottom: 30px;
-
-    word-spacing: 2px;
 
     color:#526b51;
 }
@@ -74,8 +78,6 @@ body{
 
 .container button{
 
-    display: inline-block;
-
     width: 100%;
 
     padding: 18px;
@@ -97,13 +99,11 @@ body{
     font-weight: bold;
 }
 
-button:hover {
+.container button:hover{
 
     background-color: transparent;
 
     border: 4px solid white;
-
-    border-radius: 24px;
 
     color: #ffffff67;
 
@@ -144,11 +144,9 @@ button:hover {
 
 .links a:hover{
 
-    color: rgb(255, 255, 255);
-
-    text-decoration: underline;
-
-    transition: 0.3s;
+    color: white;
 
     background-color: transparent;
+
+    transition: 0.3s;
 }

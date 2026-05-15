@@ -5,81 +5,81 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Login - GreenLog</title>
+    <title>Login</title>
 
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('css/login.css') }}">
 
 </head>
 
 <body>
 
-    <main class="container">
+<main class="container">
 
-        <main>
+    <main>
 
-            <h1>Entrar na conta</h1>
+        <h1>
+            Entrar na conta
+        </h1>
 
-            @if(session('erro'))
+        @if(session('erro'))
 
-                <p style="color:red; text-align:center; margin-bottom:15px;">
+            <p>
+                {{ session('erro') }}
+            </p>
 
-                    {{ session('erro') }}
+        @endif
 
-                </p>
+        <form action="/login"
+              method="POST">
 
-            @endif
+            @csrf
 
-            <form action="{{ route('login.auth') }}" method="POST">
+            <div class="email">
 
-                @csrf
+                <input type="email"
+                       name="email"
+                       placeholder="Email"
+                       required>
 
-                <div class="email">
+            </div>
 
-                    <input
-                        placeholder="Email"
-                        type="email"
-                        name="email"
-                        required
-                    >
+            <div class="senha">
 
-                </div>
+                <input type="password"
+                       name="senha"
+                       placeholder="Senha"
+                       required>
 
-                <div class="senha">
+            </div>
 
-                    <input
-                        placeholder="Senha"
-                        type="password"
-                        name="senha"
-                        required
-                    >
+            <button type="submit">
 
-                </div>
+                Entrar
 
-                <button type="submit">
+            </button>
 
-                    Entrar
-
-                </button>
-
-            </form>
-
-        </main>
-
-        <div class="links">
-
-            <a href="/">
-                Voltar para o site
-            </a>
-
-            <a href="/register">
-                Criar conta
-            </a>
-
-        </div>
+        </form>
 
     </main>
 
+    <div class="links">
+
+        <a href="/">
+            Voltar
+        </a>
+
+        <a href="/register">
+            Criar Conta
+        </a>
+
+    </div>
+
+</main>
+
 </body>
+
 </html>

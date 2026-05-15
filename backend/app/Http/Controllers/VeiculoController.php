@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Models\Veiculo;
 
 class VeiculoController extends Controller
@@ -11,24 +12,31 @@ class VeiculoController extends Controller
     {
         $veiculos = Veiculo::all();
 
-        return view('veiculos.index', compact('veiculos'));
+        return view('veiculos.index',
+            compact('veiculos'));
     }
 
     public function create()
     {
-        return view('veiculos.create');
+        return redirect('/veiculos');
     }
 
     public function store(Request $request)
     {
         Veiculo::create([
 
-            'novo_veiculo' => $request->novo_veiculo,
+            'novo_veiculo' => 'Veículo',
+
             'modelo' => $request->modelo,
+
             'marca' => $request->marca,
+
             'placa' => $request->placa,
+
             'ano' => $request->ano,
+
             'estado' => $request->estado,
+
             'observacao' => $request->observacao
 
         ]);
@@ -36,11 +44,14 @@ class VeiculoController extends Controller
         return redirect('/veiculos');
     }
 
+    public function show($id)
+    {
+        return redirect('/veiculos');
+    }
+
     public function edit($id)
     {
-        $veiculo = Veiculo::findOrFail($id);
-
-        return view('veiculos.edit', compact('veiculo'));
+        return redirect('/veiculos');
     }
 
     public function update(Request $request, $id)
@@ -49,12 +60,18 @@ class VeiculoController extends Controller
 
         $veiculo->update([
 
-            'novo_veiculo' => $request->novo_veiculo,
+            'novo_veiculo' => 'Veículo',
+
             'modelo' => $request->modelo,
+
             'marca' => $request->marca,
+
             'placa' => $request->placa,
+
             'ano' => $request->ano,
+
             'estado' => $request->estado,
+
             'observacao' => $request->observacao
 
         ]);

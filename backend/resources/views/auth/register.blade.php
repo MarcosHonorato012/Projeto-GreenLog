@@ -5,11 +5,13 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Criar Conta - GreenLog</title>
+    <title>Criar Conta</title>
 
-    <link rel="stylesheet" href="{{ asset('css/criarconta.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('css/criarconta.css') }}">
 
 </head>
 
@@ -19,54 +21,64 @@
 
     <main>
 
-        <h1>Seja Bem-Vindo(a)</h1>
+        <h1>
+            Criar Conta
+        </h1>
 
-        <form action="{{ route('register.store') }}" method="POST">
+        <form action="{{ route('register.store') }}"
+              method="POST">
 
             @csrf
 
             <div class="nome">
-                <input
-                    placeholder="Nome"
-                    type="text"
-                    name="nome"
-                    required>
+
+                <input type="text"
+                       name="nome"
+                       placeholder="Nome"
+                       required>
+
             </div>
 
             <div class="email">
-                <input
-                    placeholder="Email"
-                    type="email"
-                    name="email"
-                    required>
+
+                <input type="email"
+                       name="email"
+                       placeholder="Email"
+                       required>
+
             </div>
 
             <div class="senha">
-                <input
-                    placeholder="Senha"
-                    type="password"
-                    name="senha"
-                    required>
+
+                <input type="password"
+                       name="senha"
+                       placeholder="Senha"
+                       required>
+
             </div>
 
             <div class="telefone">
-                <input
-                    placeholder="Telefone"
-                    type="tel"
-                    name="telefone"
-                    required>
+
+                <input type="text"
+                       name="telefone"
+                       placeholder="Telefone"
+                       required>
+
             </div>
 
-            <div class="telefone">
-                <input
-                    placeholder="CPF"
-                    type="text"
-                    name="cpf"
-                    required>
+            <div class="cpf">
+
+                <input type="text"
+                       name="cpf"
+                       placeholder="CPF"
+                       required>
+
             </div>
 
             <button type="submit">
+
                 Criar Conta
+
             </button>
 
         </form>
@@ -76,11 +88,11 @@
     <div class="links">
 
         <a href="/">
-            Voltar para o site
+            Voltar
         </a>
 
         <a href="/login">
-            Entrar na conta
+            Entrar
         </a>
 
     </div>
@@ -88,4 +100,5 @@
 </main>
 
 </body>
+
 </html>

@@ -17,7 +17,7 @@
     <title>GreenLog</title>
 
     <link rel="stylesheet"
-          href="{{ asset('css/site.css') }}">
+          href="{{asset('css/site.css')}}">
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
           rel="stylesheet">
@@ -62,7 +62,8 @@
 
     <section class="hero">
 
-        <img src="https://img.freepik.com/fotos-premium/integracao-de-energias-renovaveis-numa-paisagem-rural-com-turbinas-eolicas-e-digestores-de-biogas-conceito-energia-renovavel-turbinas-eolicos-digestores-de-biogas-paisagem-rural-sustentabilidade_918839-142376.jpg?w=996">
+        <img src="https://img.freepik.com/fotos-premium/integracao-de-energias-renovaveis-numa-paisagem-rural-com-turbinas-eolicas-e-digestores-de-biogas-conceito-energia-renovavel-turbinas-eolicos-digestores-de-biogas-paisagem-rural-sustentabilidade_918839-142376.jpg?w=996"
+             alt="Sustentabilidade GreenLog">
 
     </section>
 
@@ -71,7 +72,7 @@
         <h2>Registro e Acompanhamento</h2>
 
         <p>
-            Acompanhe viagens e veículos da sua empresa.
+            Acompanhe viagens, organize informações da frota e mantenha o controle das operações logísticas de forma simples e eficiente.
         </p>
 
     </section>
@@ -84,6 +85,10 @@
 
             <div>Redução de CO²</div>
 
+            <label>
+                Menos poluição no transporte.
+            </label>
+
         </div>
 
         <div class="info-box">
@@ -91,6 +96,10 @@
             <i class="fas fa-car"></i>
 
             <div>Tecnologia Inteligente</div>
+
+            <label>
+                Controle rápido e eficiente.
+            </label>
 
         </div>
 
@@ -100,6 +109,24 @@
 
             <div>Logística Sustentável</div>
 
+            <label>
+                Operações mais conscientes.
+            </label>
+
+        </div>
+
+    </section>
+
+    <section class="saiba-mais-nova">
+
+        <div>
+
+            <h2>Sobre nós</h2>
+
+            <p>
+                A GreenLog nasceu com o objetivo de modernizar a logística urbana através da inovação e da sustentabilidade. Nosso sistema facilita o gerenciamento de veículos e viagens, oferecendo mais controle, eficiência e responsabilidade ambiental para empresas do setor logístico.
+            </p>
+
         </div>
 
     </section>
@@ -108,9 +135,37 @@
 
 <footer>
 
+    <div class="redes">
+
+        <a href="https://wa.me/qr/PWMLOVYIWLQ6D1"
+           target="_blank">
+
+            <i class="fab fa-whatsapp"></i>
+
+        </a>
+
+        <a href="https://www.instagram.com/greenlog.oficial?igsh=aWczbjMwc3NlZ3Rj"
+           target="_blank">
+
+            <i class="fab fa-instagram"></i>
+
+        </a>
+
+        <a href="#">
+
+            <i class="fab fa-linkedin-in"></i>
+
+        </a>
+
+    </div>
+
     <p>
-        © GreenLog 2026
+        © Copyright 2026 - GreenLog
     </p>
+
+    <h4>
+        GreenLog
+    </h4>
 
 </footer>
 

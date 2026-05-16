@@ -10,6 +10,9 @@
 
     <title>Registro de Viagem</title>
 
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+          rel="stylesheet">
+
     <link rel="stylesheet"
           href="{{ asset('css/siteregistro.css') }}">
 
@@ -28,52 +31,102 @@
             Registro de Viagem
         </h1>
 
-        <select name="veiculo_id"
-                required>
+        <div class="veiculo">
 
-            <option value="">
-                Selecione o veículo
-            </option>
+            <select name="veiculo_id"
+                    required>
 
-            @foreach($veiculos as $veiculo)
-
-                <option value="{{ $veiculo->id }}">
-
-                    {{ $veiculo->marca }}
-                    -
-                    {{ $veiculo->modelo }}
-
+                <option value="">
+                    Selecione o veículo
                 </option>
 
-            @endforeach
+                @foreach($veiculos as $veiculo)
 
-        </select>
+                    <option value="{{ $veiculo->id }}">
 
-        <input type="date"
-               name="data_criacao"
-               required>
+                        {{ $veiculo->marca }} -
+                        {{ $veiculo->modelo }}
 
-        <input type="text"
-               name="partida"
-               placeholder="Origem"
-               required>
+                    </option>
 
-        <input type="text"
-               name="destino"
-               placeholder="Destino"
-               required>
+                @endforeach
 
-        <input type="number"
-               name="distancia_km"
-               placeholder="Distância KM"
-               required>
+            </select>
 
-        <input type="text"
-               name="conclusao"
-               placeholder="Status">
+        </div>
 
-        <textarea name="observacao"
-                  placeholder="Observação"></textarea>
+        <div class="usuario">
+
+            <select name="userr_id"
+                    required>
+
+                <option value="">
+                    Selecione o usuário
+                </option>
+
+                @foreach($userrs as $userr)
+
+                    <option value="{{ $userr->id }}">
+
+                        {{ $userr->nome }}
+
+                    </option>
+
+                @endforeach
+
+            </select>
+
+        </div>
+
+        <div class="data">
+
+            <input type="date"
+                   name="data_criacao"
+                   required>
+
+        </div>
+
+        <div class="origem">
+
+            <input placeholder="Origem"
+                   type="text"
+                   name="partida"
+                   required>
+
+        </div>
+
+        <div class="destino">
+
+            <input placeholder="Destino"
+                   type="text"
+                   name="destino"
+                   required>
+
+        </div>
+
+        <div class="status">
+
+            <input placeholder="Status"
+                   type="text"
+                   name="conclusao">
+
+        </div>
+
+        <div class="distancia">
+
+            <input placeholder="Distância KM"
+                   type="number"
+                   name="distancia_km"
+                   required>
+
+        </div>
+
+        <div class="observacao">
+
+            <textarea name="observacao"
+                      placeholder="Observação"></textarea>
+
+        </div>
 
         <button type="submit">
 
@@ -82,7 +135,7 @@
         </button>
 
         <a href="/">
-            Voltar
+            Voltar para o site
         </a>
 
     </form>

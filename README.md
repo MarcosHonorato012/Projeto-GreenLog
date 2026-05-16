@@ -60,6 +60,8 @@ Configurar o arquivo .env
 Caminho do arquivo: /Projeto-GreenLog/backend/.env
 
 
+Copiar o arquivo:  cp .env.example .env  
+
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
 DB_PORT=5432
